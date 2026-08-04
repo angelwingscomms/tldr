@@ -4,7 +4,7 @@
 		"rewriteRelativeImportExtensions": true,
 		"sourceMap": true,
 		"strict": true,
-		"types": ["$app/types"],
+		"types": ["$app/types", "@cloudflare/workers-types"],
 		"paths": {
 			"$lib": ["./src/lib/index.js"],
 			"$lib/*": ["./src/lib/*"],

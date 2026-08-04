@@ -9,5 +9,7 @@
 		"directory": ".svelte-kit/cloudflare"
 	},
 	"workers_dev": true,
-	"preview_urls": true
+	"preview_urls": true,
+	"d1_databases": [{ "binding": "DB", "database_name": "tldr", "database_id": "PLACEHOLDER", "migrations_dir": "migrations" }],
+	"r2_buckets": [{ "binding": "R2", "bucket_name": "tldr" }]
 }
