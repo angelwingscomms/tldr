@@ -5,6 +5,8 @@ declare global {
 		DB: D1Database;
 		R2: R2Bucket;
 		SECRET: string | { get?: () => Promise<string> };
+		GOOGLE_ID: string | { get?: () => Promise<string> };
+		GOOGLE_SECRET: string | { get?: () => Promise<string> };
 	}
 
 	namespace App {
