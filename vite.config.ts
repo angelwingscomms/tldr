@@ -18,6 +18,9 @@ export default defineConfig({
 			experimental: { remoteFunctions: true, forkPreloads: true }
 		})
 	],
+	resolve: {
+		alias: { $lib: './src/lib' }
+	},
 	test: {
 		expect: { requireAssertions: true },
 		projects: [

@@ -4,7 +4,13 @@
 		"rewriteRelativeImportExtensions": true,
 		"sourceMap": true,
 		"strict": true,
-		"types": ["$app/types"]
+		"types": ["$app/types"],
+		"paths": {
+			"$lib": ["./src/lib/index.js"],
+			"$lib/*": ["./src/lib/*"],
+			"#lib": ["./src/lib/index.js"],
+			"#lib/*": ["./src/lib/*"]
+		}
 	},
 	"include": ["src"]
 }

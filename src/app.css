@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+	--font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+	--font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+
+	--color-bg: oklch(0.16 0.008 260);
+	--color-surface: oklch(0.21 0.01 260);
+	--color-line: oklch(0.30 0.012 260);
+	--color-ink: oklch(0.96 0.004 260);
+	--color-muted: oklch(0.68 0.012 260);
+	--color-accent: oklch(0.72 0.16 155);
+	--color-danger: oklch(0.66 0.19 22);
+
+	--radius-card: 0.75rem;
+	--radius-field: 0.5rem;
+}
+
+@layer base {
+	html {
+		background: var(--color-bg);
+		color: var(--color-ink);
+		font-family: var(--font-sans);
+	}
+}
