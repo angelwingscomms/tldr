@@ -10,9 +10,9 @@ export async function get_or_create_device_user(db: Db, device_id: string) {
 	return (await get_user(db, id))!;
 }
 
-export async function ensure_session(event: RequestEvent) {
-	if (event.locals.user) return event.locals.user;
-	const u = await get_or_create_device_user(event.locals.db, event.locals.device_id);
-	event.locals.user = { id: u.id, n: u.n, dv: u.dv === 1 };
-	return event.locals.user;
+export async function ensure_session(locals: App.Locals) {
+	if (locals.user) return locals.user;
+	const u = await get_or_create_device_user(locals.db, locals.device_id);
+	locals.user = { id: u.id, n: u.n, dv: u.dv === 1 };
+	return locals.user;
 }

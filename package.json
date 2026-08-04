@@ -50,6 +50,8 @@
 		"#lib/*": "./src/lib/*"
 	},
 	"dependencies": {
+		"@ai-sdk/openai-compatible": "^3.0.20",
+		"ai": "^7.0.49",
 		"arctic": "^3.7.0"
 	}
 }
