@@ -7,6 +7,12 @@ declare global {
 	}
 
 	namespace App {
+		interface Locals {
+			db: D1Database;
+			device_id: string;
+			user: import('$lib/server/session').SessionUser | null;
+		}
+
 		interface Platform {
 			env: Env;
 			ctx: ExecutionContext;

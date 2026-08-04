@@ -1,5 +1,9 @@
 export type Db = D1Database;
 export const now = () => Date.now();
+export async function uuid_from(s: string): Promise<string> {
+	const h = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
+	return [...new Uint8Array(h)].map((b) => b.toString(16).padStart(2, '0')).join('').slice(0, 24);
+}
 export function new_id(): string {
 	return crypto.randomUUID().replace(/-/g, '').slice(0, 24);
 }
