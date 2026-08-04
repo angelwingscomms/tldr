@@ -1,13 +1,16 @@
 import type { Handle } from '@sveltejs/kit';
 import { decode_session } from '$lib/server/session';
-import { env } from '$env/dynamic/private';
+import { get_secret } from '$lib/server/env';
 
 export const handle: Handle = async ({ event, resolve }) => {
 	let db: D1Database | undefined;
+	let secret: string | undefined;
 	try {
 		db = event.platform?.env?.DB;
+		secret = await get_secret(event.platform?.env?.SECRET);
 	} catch {
 		db = undefined;
+		secret = undefined;
 	}
 	event.locals.db = db as D1Database;
 
@@ -20,8 +23,8 @@ export const handle: Handle = async ({ event, resolve }) => {
 	event.locals.device_id = device_id;
 
 	const session = cookies.get('session');
-	if (session) {
-		const user = await decode_session(env.SECRET, session);
+	if (session && secret) {
+		const user = await decode_session(secret, session);
 		if (user) {
 			event.locals.user = user;
 		} else {
