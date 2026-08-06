@@ -22,17 +22,15 @@ export const handle: Handle = async ({ event, resolve }) => {
 	}
 	event.locals.device_id = device_id;
 
+	event.locals.user = null;
+	const bearer = event.request.headers.get('authorization')?.replace(/^Bearer /, '');
 	const session = cookies.get('session');
-	if (session && secret) {
+	if (bearer && secret) {
+		event.locals.user = await decode_session(secret, bearer);
+	} else if (session && secret) {
 		const user = await decode_session(secret, session);
-		if (user) {
-			event.locals.user = user;
-		} else {
-			cookies.delete('session', { path: '/' });
-			event.locals.user = null;
-		}
-	} else {
-		event.locals.user = null;
+		if (user) event.locals.user = user;
+		else cookies.delete('session', { path: '/' });
 	}
 
 	return resolve(event);

@@ -1,4 +1,4 @@
-import type { RequestEvent } from '@sveltejs/kit';
+import { error } from '@sveltejs/kit';
 import { get_user, create_user } from './user';
 import { uuid_from, type Db } from './db';
 
@@ -13,6 +13,7 @@ export async function get_or_create_device_user(db: Db, device_id: string) {
 export async function ensure_session(locals: App.Locals) {
 	if (locals.user) return locals.user;
 	const u = await get_or_create_device_user(locals.db, locals.device_id);
-	locals.user = { id: u.id, n: u.n, dv: u.dv === 1 };
+	if (u.dv !== 1) error(401, 'stale_device');
+	locals.user = { id: u.id, n: u.n, dv: true };
 	return locals.user;
 }

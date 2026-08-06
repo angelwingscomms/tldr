@@ -9,6 +9,16 @@ describe('session', () => {
 		expect(await decode_session(S, t)).toEqual({ id: 'u1', n: 'ed', dv: true });
 	});
 
+	it('round-trips a non-ascii name', async () => {
+		const t = await encode_session(S, { id: 'u1', n: 'José 李 🙂' });
+		expect(await decode_session(S, t)).toEqual({ id: 'u1', n: 'José 李 🙂' });
+	});
+
+	it('rejects an expired token but honours a live one', async () => {
+		expect(await decode_session(S, await encode_session(S, { id: 'u1', n: 'ed', exp: Date.now() - 1 }))).toBeNull();
+		expect(await decode_session(S, await encode_session(S, { id: 'u1', n: 'ed', exp: Date.now() + 60000 }))).not.toBeNull();
+	});
+
 	it('rejects a tampered body', async () => {
 		const t = await encode_session(S, { id: 'u1', n: 'ed' });
 		const bad = 'x' + t.slice(1);
