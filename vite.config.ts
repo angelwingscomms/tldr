@@ -1,4 +1,5 @@
 import tailwindcss from '@tailwindcss/vite';
+import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vitest/config';
 import { playwright } from '@vitest/browser-playwright';
 import adapter from '@sveltejs/adapter-cloudflare';
@@ -19,7 +20,7 @@ export default defineConfig({
 		})
 	],
 	resolve: {
-		alias: { $lib: './src/lib' }
+		alias: { $lib: fileURLToPath(new URL('./src/lib', import.meta.url)) }
 	},
 	test: {
 		expect: { requireAssertions: true },

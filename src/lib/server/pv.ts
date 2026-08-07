@@ -24,6 +24,12 @@ export async function pv_key(db: Db, master: string, uid: string, id: string): P
 	return dec(master, row.k);
 }
 
+export async function get_pv(db: Db, master: string, uid: string, id: string): Promise<{ b: string; k: string } | null> {
+	const row = await one<{ b: string; k: string }>(db, 'select b, k from pv where id = ? and uid = ?', id, uid);
+	if (!row) return null;
+	return { b: row.b, k: await dec(master, row.k) };
+}
+
 export function model_of(base: string, key: string, id: string) {
 	return createOpenAICompatible({ name: 'p', baseURL: base.replace(/\/$/, ''), apiKey: key }).chatModel(id);
 }
