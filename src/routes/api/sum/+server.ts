@@ -6,7 +6,8 @@ import { classify, extract_page, is_media_host } from '$lib/server/extract';
 import { get_pv, model_of } from '$lib/server/pv';
 import { build_prompt } from '$lib/server/prompt';
 import { get_secret } from '$lib/server/env';
-import { run, new_id, now } from '$lib/server/db';
+import { cache_key } from '$lib/server/cache';
+import { run, new_id, now, one } from '$lib/server/db';
 
 const MAX = 300_000;
 const CHUNK = 120_000;
@@ -42,8 +43,39 @@ export const POST: RequestHandler = async (event) => {
 		let media: string | null = null;
 
 		if (classify(body.i) === 'url') {
-			const url = body.i;
-			src = url;
+			src = body.i;
+		}
+
+		const h = await cache_key(src, body.md, body.ln);
+		if (h) {
+			const hit = await one<{ t: string; ty: string; b: string; src: string | null; tr: string | null }>(
+				db,
+				'select * from s where h = ? limit 1',
+				h
+			);
+			if (hit) {
+				const id = new_id();
+				await run(
+					db,
+					'insert into s (id, uid, h, t, src, ty, md, ln, b, tr, pub, cr) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, ?)',
+					id,
+					u.id,
+					h,
+					hit.t,
+					hit.src,
+					hit.ty,
+					body.md,
+					body.ln,
+					hit.b,
+					hit.tr,
+					now()
+				);
+				return new Response(hit.b, { headers: { 'x-tldr-cache': '1' } });
+			}
+		}
+
+		if (src) {
+			const url = src;
 			if (is_media_host(url)) {
 				const { get_captions } = await import('$lib/server/captions');
 				const caps = await get_captions(url);
@@ -121,7 +153,7 @@ export const POST: RequestHandler = async (event) => {
 			'insert into s (id, uid, h, t, src, ty, md, ln, b, tr, pub, cr) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, ?)',
 			id,
 			u.id,
-			null,
+			h,
 			title,
 			src,
 			ty,
