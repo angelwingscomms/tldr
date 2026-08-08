@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
+	import { browser } from '$app/env';
 	import { ctrl_enter } from '$lib/actions';
 
 	type Pv = { id: string; n: string; b: string; m: string | null };
