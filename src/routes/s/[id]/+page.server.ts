@@ -10,5 +10,5 @@ export const load: PageServerLoad = async ({ params, locals }) => {
 	);
 	if (!row) error(404, 'missing');
 	if (row.uid !== locals.user?.id && row.pub !== 1) error(404, 'private');
-	return { r: row };
+	return { r: row, me: locals.user?.id ?? null };
 };
