@@ -3,10 +3,17 @@
 	import { ctrl_enter } from '$lib/actions';
 	import { render_md } from '$lib/md';
 
+	type Prov = { id: string; n: string; m: string | null };
+
+	let { p = [], load_pv = false }: { p?: Prov[]; load_pv?: boolean } = $props();
+
 	let input = $state('');
 	let ln = $state<'s' | 'm' | 'l'>('m');
 	let pv = $state('');
 	let md = $state('');
+	let fetched = $state<Prov[] | null>(null);
+	const pvs = $derived(fetched ?? p);
+	let mds = $state<string[]>([]);
 	let out = $state('');
 	let err = $state('');
 	let busy = $state(false);
@@ -31,6 +38,34 @@
 		a.click();
 		URL.revokeObjectURL(a.href);
 	};
+
+	$effect(() => {
+		if (!browser || !load_pv) return;
+		void (async () => {
+			const res = await fetch('/api/pv');
+			if (!res.ok) return;
+			fetched = ((await res.json()) as { p: Prov[] }).p ?? [];
+		})();
+	});
+
+	$effect(() => {
+		if (!pv && pvs.length) pv = pvs[0].id;
+	});
+
+	$effect(() => {
+		const id = pv;
+		if (!browser || !id) {
+			mds = [];
+			return;
+		}
+		void (async () => {
+			const res = await fetch(`/api/pv/${id}/models`);
+			const list = res.ok ? (((await res.json()) as { m: string[] }).m ?? []) : [];
+			if (pv !== id) return;
+			mds = list;
+			md = list.includes(md) ? md : (pvs.find((p) => p.id === id)?.m ?? list[0] ?? '');
+		})();
+	});
 
 	const reset = () => {
 		started = false;
@@ -95,9 +130,15 @@
 			</div>
 			<select bind:value={pv} class="rounded-field border border-line bg-surface px-2 py-1.5 text-sm text-ink">
 				<option value="">provider</option>
+				{#each pvs as p}
+					<option value={p.id}>{p.n}</option>
+				{/each}
 			</select>
 			<select bind:value={md} class="rounded-field border border-line bg-surface px-2 py-1.5 text-sm text-ink">
 				<option value="">model</option>
+				{#each mds as m}
+					<option value={m}>{m}</option>
+				{/each}
 			</select>
 			<button
 				type="button"
@@ -108,6 +149,13 @@
 				summarize
 			</button>
 		</div>
+		{#if browser && !pvs.length}
+			<p class="text-sm text-muted">
+				no providers yet — <a href="/settings" class="text-accent">add one in settings</a>
+			</p>
+		{:else if pv && !mds.length}
+			<p class="text-sm text-muted">no models came back from this provider — check its key in settings</p>
+		{/if}
 	</form>
 {/if}
 {#if err}

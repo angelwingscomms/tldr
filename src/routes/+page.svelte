@@ -1,11 +1,12 @@
 <script lang="ts">
 	import SumBox from '$lib/SumBox.svelte';
 
-	let { data }: { data?: { r?: Row[] } } = $props();
+	let { data }: { data?: { r?: Row[]; p?: Prov[] } } = $props();
 
 	let q = $state('');
 	let list: Row[] = $state(data?.r ?? []);
 
+	type Prov = { id: string; n: string; m: string | null };
 	type Row = { id: string; t: string; ty: string; ln?: string; cr: number; sn?: string | null };
 
 	const ty_icon: Record<string, string> = { v: 'v', a: 'a', w: 'w', x: 'x' };
@@ -36,7 +37,7 @@
 
 <div class="mx-auto flex w-full max-w-2xl flex-col gap-6 px-6 py-16">
 	<h1 class="text-2xl font-bold tracking-tight text-ink">tldr</h1>
-	<SumBox />
+	<SumBox p={data?.p ?? []} />
 	<div class="flex flex-col gap-2">
 		<input
 			bind:value={q}

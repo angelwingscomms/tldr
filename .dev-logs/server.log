@@ -167,3 +167,239 @@ TypeError: Cannot read properties of null (reading 'function')
     at Renderer.component (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1483:22)
 [500] GET /
 [304] GET /
+[304] GET /
+11:03:27 PM [vite] (client) hmr update /src/lib/SumBox.svelte, /src/app.css
+11:03:27 PM [vite] (ssr) page reload src/lib/SumBox.svelte
+11:03:27 PM [vite] (ssr) program reload
+11:03:34 PM [vite] (client) hmr update /src/lib/SumBox.svelte, /src/app.css
+11:03:34 PM [vite] (ssr) page reload src/lib/SumBox.svelte
+11:03:34 PM [vite] (ssr) program reload
+[200] GET /api/pv
+11:03:40 PM [vite] (client) hmr update /src/lib/SumBox.svelte, /src/app.css
+11:03:40 PM [vite] (ssr) page reload src/lib/SumBox.svelte
+11:03:40 PM [vite] (ssr) program reload
+[200] GET /api/pv
+[200] GET /api/pv
+11:04:32 PM [vite] (client) hmr update /src/lib/SumBox.svelte, /src/app.css
+11:04:32 PM [vite] (ssr) page reload src/lib/SumBox.svelte
+11:04:32 PM [vite] (ssr) program reload
+[200] GET /api/pv
+[200] POST /api/pv
+[200] GET /api/pv
+[200] GET /settings
+[200] GET /api/pv
+[200] POST /api/pv
+[200] GET /api/pv
+[200] GET /
+[200] GET /api/pv
+[200] GET /api/pv/99cdf2c66ff6434c90230830/models
+[200] DELETE /api/pv/b792607c9b0a413990cd972f
+[304] GET /settings
+[200] GET /api/pv
+[200] DELETE /api/pv/99cdf2c66ff6434c90230830
+[200] GET /api/pv
+11:05:31 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/0.js
+11:05:31 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/1.js
+11:05:31 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/2.js
+11:05:31 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/6.js
+11:05:31 PM [vite] (client) page reload .svelte-kit/generated/client/app.js
+11:05:31 PM [vite] (client) page reload .svelte-kit/generated/client/matchers.js
+11:05:31 PM [vite] (ssr) page reload .svelte-kit/generated/shared/error-template.js
+11:05:31 PM [vite] (ssr) program reload
+11:05:31 PM [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+11:05:32 PM [vite] (ssr) program reload
+TypeError: Cannot read properties of null (reading 'function')
+    at Module.push_element (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1975:25)
+    at eval (/home/ed/i/tldr/src/routes/+layout.svelte:24:27)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at eval (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:885:12)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at Renderer.head (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1331:8)
+    at Module.head (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:883:11)
+    at eval (/home/ed/i/tldr/src/routes/+layout.svelte:22:26)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at Renderer.component (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1483:22)
+TypeError: Cannot read properties of null (reading 'function')
+    at Module.push_element (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1975:25)
+    at eval (/home/ed/i/tldr/node_modules/.pnpm/@sveltejs+kit@3.0.0-next.14_@sveltejs+vite-plugin-svelte@7.2.0_svelte@5.56.8_@typescrip_eea05ef3e4edb8efd3b73f75ff234b3c/node_modules/@sveltejs/kit/src/runtime/components/error.svelte?v=349900c6:19:26)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at Renderer.component (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1483:22)
+    at Error (/home/ed/i/tldr/node_modules/.pnpm/@sveltejs+kit@3.0.0-next.14_@sveltejs+vite-plugin-svelte@7.2.0_svelte@5.56.8_@typescrip_eea05ef3e4edb8efd3b73f75ff234b3c/node_modules/@sveltejs/kit/src/runtime/components/error.svelte?v=349900c6:16:13)
+    at failed (/home/ed/i/tldr/node_modules/.pnpm/@sveltejs+kit@3.0.0-next.14_@sveltejs+vite-plugin-svelte@7.2.0_svelte@5.56.8_@typescrip_eea05ef3e4edb8efd3b73f75ff234b3c/node_modules/@sveltejs/kit/src/runtime/components/root.svelte?v=349900c6:48:14)
+    at Renderer.boundary (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1469:5)
+    at node (/home/ed/i/tldr/node_modules/.pnpm/@sveltejs+kit@3.0.0-next.14_@sveltejs+vite-plugin-svelte@7.2.0_svelte@5.56.8_@typescrip_eea05ef3e4edb8efd3b73f75ff234b3c/node_modules/@sveltejs/kit/src/runtime/components/root.svelte?v=349900c6:56:16)
+    at eval (/home/ed/i/tldr/node_modules/.pnpm/@sveltejs+kit@3.0.0-next.14_@sveltejs+vite-plugin-svelte@7.2.0_svelte@5.56.8_@typescrip_eea05ef3e4edb8efd3b73f75ff234b3c/node_modules/@sveltejs/kit/src/runtime/components/root.svelte?v=349900c6:101:4)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+TypeError: Cannot read properties of null (reading 'function')
+    at Module.push_element (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1975:25)
+    at eval (/home/ed/i/tldr/src/routes/+layout.svelte:24:27)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at eval (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:885:12)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at Renderer.head (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1331:8)
+    at Module.head (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:883:11)
+    at eval (/home/ed/i/tldr/src/routes/+layout.svelte:22:26)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at Renderer.component (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1483:22)
+[500] GET /settings
+[404] GET /favicon.ico
+[200] GET /
+[200] GET /api/pv
+11:05:36 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/0.js
+11:05:36 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/1.js
+11:05:36 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/2.js
+11:05:36 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/6.js
+11:05:36 PM [vite] (client) page reload .svelte-kit/generated/client/app.js
+11:05:36 PM [vite] (client) page reload .svelte-kit/generated/client/matchers.js
+11:05:36 PM [vite] (ssr) page reload .svelte-kit/generated/shared/error-template.js
+11:05:36 PM [vite] (ssr) program reload
+11:05:36 PM [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+11:05:36 PM [vite] (ssr) program reload
+TypeError: Cannot read properties of null (reading 'function')
+    at Module.push_element (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1975:25)
+    at eval (/home/ed/i/tldr/src/routes/+layout.svelte:24:27)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at eval (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:885:12)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at Renderer.head (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1331:8)
+    at Module.head (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:883:11)
+    at eval (/home/ed/i/tldr/src/routes/+layout.svelte:22:26)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at Renderer.component (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1483:22)
+TypeError: Cannot read properties of null (reading 'function')
+    at Module.push_element (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1975:25)
+    at eval (/home/ed/i/tldr/node_modules/.pnpm/@sveltejs+kit@3.0.0-next.14_@sveltejs+vite-plugin-svelte@7.2.0_svelte@5.56.8_@typescrip_eea05ef3e4edb8efd3b73f75ff234b3c/node_modules/@sveltejs/kit/src/runtime/components/error.svelte?v=349900c6:19:26)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at Renderer.component (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1483:22)
+    at Error (/home/ed/i/tldr/node_modules/.pnpm/@sveltejs+kit@3.0.0-next.14_@sveltejs+vite-plugin-svelte@7.2.0_svelte@5.56.8_@typescrip_eea05ef3e4edb8efd3b73f75ff234b3c/node_modules/@sveltejs/kit/src/runtime/components/error.svelte?v=349900c6:16:13)
+    at failed (/home/ed/i/tldr/node_modules/.pnpm/@sveltejs+kit@3.0.0-next.14_@sveltejs+vite-plugin-svelte@7.2.0_svelte@5.56.8_@typescrip_eea05ef3e4edb8efd3b73f75ff234b3c/node_modules/@sveltejs/kit/src/runtime/components/root.svelte?v=349900c6:48:14)
+    at Renderer.boundary (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1469:5)
+    at node (/home/ed/i/tldr/node_modules/.pnpm/@sveltejs+kit@3.0.0-next.14_@sveltejs+vite-plugin-svelte@7.2.0_svelte@5.56.8_@typescrip_eea05ef3e4edb8efd3b73f75ff234b3c/node_modules/@sveltejs/kit/src/runtime/components/root.svelte?v=349900c6:56:16)
+    at eval (/home/ed/i/tldr/node_modules/.pnpm/@sveltejs+kit@3.0.0-next.14_@sveltejs+vite-plugin-svelte@7.2.0_svelte@5.56.8_@typescrip_eea05ef3e4edb8efd3b73f75ff234b3c/node_modules/@sveltejs/kit/src/runtime/components/root.svelte?v=349900c6:101:4)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+TypeError: Cannot read properties of null (reading 'function')
+    at Module.push_element (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1975:25)
+    at eval (/home/ed/i/tldr/src/routes/+layout.svelte:24:27)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at eval (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:885:12)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at Renderer.head (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1331:8)
+    at Module.head (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:883:11)
+    at eval (/home/ed/i/tldr/src/routes/+layout.svelte:22:26)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at Renderer.component (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1483:22)
+[500] GET /settings
+[304] GET /
+[200] GET /api/pv
+11:05:57 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/0.js
+11:05:57 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/1.js
+11:05:57 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/2.js
+11:05:57 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/6.js
+11:05:57 PM [vite] (client) page reload .svelte-kit/generated/client/app.js
+11:05:57 PM [vite] (client) page reload .svelte-kit/generated/client/matchers.js
+11:05:57 PM [vite] (ssr) page reload .svelte-kit/generated/shared/error-template.js
+11:05:57 PM [vite] (ssr) program reload
+11:05:57 PM [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+11:05:57 PM [vite] (ssr) program reload
+[304] GET /
+[200] GET /api/pv
+11:06:22 PM [vite] (client) hmr update /src/lib/SumBox.svelte, /src/app.css
+11:06:22 PM [vite] (ssr) page reload src/lib/SumBox.svelte
+11:06:22 PM [vite] (ssr) program reload
+[200] GET /api/pv
+11:06:29 PM [vite-plugin-svelte] src/lib/SumBox.svelte:14:26 This reference only captures the initial value of `p`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+11:06:29 PM [vite] (client) hmr update /src/lib/SumBox.svelte, /src/app.css
+11:06:29 PM [vite] (ssr) page reload src/lib/SumBox.svelte
+11:06:29 PM [vite] (ssr) program reload
+11:06:29 PM [vite-plugin-svelte] src/lib/SumBox.svelte:14:26 This reference only captures the initial value of `p`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+11:06:29 PM [vite-plugin-svelte] src/lib/SumBox.svelte:14:26 This reference only captures the initial value of `p`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+[200] GET /api/pv
+11:06:34 PM [vite-plugin-svelte] src/lib/SumBox.svelte:14:26 This reference only captures the initial value of `p`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+11:06:35 PM [vite] (client) hmr update /src/lib/SumBox.svelte, /src/app.css
+11:06:35 PM [vite] (ssr) page reload src/lib/SumBox.svelte
+11:06:35 PM [vite] (ssr) program reload
+11:06:35 PM [vite-plugin-svelte] src/lib/SumBox.svelte:14:26 This reference only captures the initial value of `p`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+11:06:35 PM [vite-plugin-svelte] src/lib/SumBox.svelte:14:26 This reference only captures the initial value of `p`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+11:06:45 PM [vite] (client) hmr update /src/app.css
+11:06:45 PM [vite] (ssr) page reload src/routes/+page.server.ts
+11:06:45 PM [vite] (client) hmr update /src/app.css
+11:06:45 PM [vite] (ssr) page reload src/routes/e/+page.svelte
+11:06:45 PM [vite-plugin-svelte] src/routes/+page.svelte:7:26 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+11:06:45 PM [vite] (client) hmr update /src/routes/+page.svelte, /src/app.css
+11:06:45 PM [vite] (ssr) page reload src/routes/+page.svelte
+11:06:45 PM [vite] (ssr) program reload
+11:06:45 PM [vite-plugin-svelte] src/routes/+page.svelte:7:26 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+11:06:45 PM [vite-plugin-svelte] src/routes/+page.svelte:7:26 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+11:06:53 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/0.js
+11:06:53 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/1.js
+11:06:53 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/2.js
+11:06:53 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/6.js
+11:06:53 PM [vite] (client) page reload .svelte-kit/generated/client/app.js
+11:06:53 PM [vite] (client) page reload .svelte-kit/generated/client/matchers.js
+11:06:53 PM [vite] (ssr) page reload .svelte-kit/generated/shared/error-template.js
+11:06:53 PM [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+[200] GET /
+11:06:58 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/0.js
+11:06:58 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/1.js
+11:06:58 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/2.js
+11:06:58 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/6.js
+11:06:58 PM [vite] (client) page reload .svelte-kit/generated/client/app.js
+11:06:58 PM [vite] (client) page reload .svelte-kit/generated/client/matchers.js
+11:06:58 PM [vite] (ssr) page reload .svelte-kit/generated/shared/error-template.js
+11:06:58 PM [vite] (ssr) program reload
+11:06:58 PM [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+11:06:58 PM [vite] (ssr) program reload
+[304] GET /
+11:07:14 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/0.js
+11:07:14 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/1.js
+11:07:14 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/2.js
+11:07:14 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/6.js
+11:07:14 PM [vite] (client) page reload .svelte-kit/generated/client/app.js
+11:07:14 PM [vite] (client) page reload .svelte-kit/generated/client/matchers.js
+11:07:14 PM [vite] (ssr) page reload .svelte-kit/generated/shared/error-template.js
+11:07:14 PM [vite] (ssr) program reload
+11:07:14 PM [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+11:07:14 PM [vite] (ssr) program reload
+[304] GET /
+11:07:33 PM [vite] (client) hmr update /src/lib/SumBox.svelte, /src/app.css
+11:07:33 PM [vite] (ssr) page reload src/lib/SumBox.svelte
+11:07:33 PM [vite] (ssr) program reload
+11:07:36 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/0.js
+11:07:36 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/1.js
+11:07:36 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/2.js
+11:07:36 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/6.js
+11:07:36 PM [vite] (client) page reload .svelte-kit/generated/client/app.js
+11:07:36 PM [vite] (client) page reload .svelte-kit/generated/client/matchers.js
+11:07:36 PM [vite] (ssr) page reload .svelte-kit/generated/shared/error-template.js
+11:07:36 PM [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+[304] GET /
+11:07:51 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/0.js
+11:07:51 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/1.js
+11:07:51 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/2.js
+11:07:51 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/6.js
+11:07:51 PM [vite] (client) page reload .svelte-kit/generated/client/app.js
+11:07:51 PM [vite] (client) page reload .svelte-kit/generated/client/matchers.js
+11:07:51 PM [vite] (ssr) page reload .svelte-kit/generated/shared/error-template.js
+11:07:51 PM [vite] (ssr) program reload
+11:07:52 PM [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+11:07:52 PM [vite] (ssr) program reload
+[304] GET /
+[200] GET /settings
+[200] GET /api/pv
+[200] POST /api/pv
+[200] GET /api/pv
+[200] GET /
+[200] GET /api/pv/db244bf92ddd46e9853f9f0c/models
+[304] GET /settings
+[200] GET /api/pv
+[200] DELETE /api/pv/db244bf92ddd46e9853f9f0c
+[200] GET /api/pv

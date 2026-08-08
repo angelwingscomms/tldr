@@ -66,7 +66,7 @@
 <div class="mx-auto flex min-h-screen w-full max-w-full flex-col gap-4 p-4">
 	<h1 class="text-xl font-bold text-ink">tldr</h1>
 	{#if authed}
-		<SumBox />
+		<SumBox load_pv />
 	{:else}
 		<form onsubmit={(e) => e.preventDefault()} class="flex flex-col gap-3">
 			<input
