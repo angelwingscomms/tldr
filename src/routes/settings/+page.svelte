@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import { ctrl_enter } from '$lib/actions';
 
 	type Pv = { id: string; n: string; b: string; m: string | null };
@@ -10,6 +11,18 @@
 	let err = $state('');
 	let models = $state<Record<string, string[]>>({});
 	let custom = $state<Record<string, string>>({});
+	let auto = $state(false);
+
+	$effect(() => {
+		if (browser) {
+			auto = localStorage.getItem('tldr:auto') === '1';
+		}
+	});
+	$effect(() => {
+		if (browser && typeof localStorage !== 'undefined') {
+			localStorage.setItem('tldr:auto', auto ? '1' : '0');
+		}
+	});
 
 	const load = async () => {
 		const res = await fetch('/api/pv');
@@ -126,6 +139,14 @@
 				add provider
 			</button>
 		</form>
+	</section>
+
+	<section class="space-y-2">
+		<h2 class="text-sm font-semibold text-muted">downloads</h2>
+		<label class="flex items-center gap-2 text-ink">
+			<input type="checkbox" bind:checked={auto} />
+			autosave every summary as .md when it finishes
+		</label>
 	</section>
 
 	<section class="space-y-2">
