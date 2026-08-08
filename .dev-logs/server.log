@@ -1,0 +1,169 @@
+$ vite dev
+10:53:29 PM [vite] (ssr) connected.
+10:53:29 PM [vite] (client) Forced re-optimization of dependencies
+
+  VITE v8.2.0  ready in 2989 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+Using secrets defined in .env
+Using secrets defined in .env
+*** Fatal uncaught kj::Exception: workerd/util/sqlite.c++:844: failed: SENTRY_DO SQLite failed; NOSENTRY database is locked: SQLITE_BUSY (extended: SQLITE_BUSY_RECOVERY)
+stack: /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@33af68b /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@2010925 /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@206e2bc /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@206dc76 /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@202b09c /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@202aaf2 /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@1fe0a32 /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@20680bf /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@206b415 /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@1fb1339 /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@5432855 /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@5432d78 /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@543082e /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@543062e /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@1f98d17 /usr/lib/libc.so.6@2abfb /usr/lib/libc.so.6@2acb4 /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@1f98024
+MiniflareCoreError [ERR_RUNTIME_FAILURE]: The Workers runtime failed to start. There was likely a problem with the workerd binary or your configuration.
+Runtime stderr:
+*** Fatal uncaught kj::Exception: workerd/util/sqlite.c++:844: failed: SENTRY_DO SQLite failed; NOSENTRY database is locked: SQLITE_BUSY (extended: SQLITE_BUSY_RECOVERY)
+stack: /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@33af68b /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@2010925 /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@206e2bc /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@206dc76 /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@202b09c /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@202aaf2 /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@1fe0a32 /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@20680bf /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@206b415 /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@1fb1339 /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@5432855 /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@5432d78 /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@543082e /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@543062e /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@1f98d17 /usr/lib/libc.so.6@2abfb /usr/lib/libc.so.6@2acb4 /home/ed/i/tldr/node_modules/.pnpm/@cloudflare+workerd-linux-64@1.20260730.1/node_modules/@cloudflare/workerd-linux-64/bin/workerd@1f98024
+TypeError: Cannot read properties of undefined (reading 'prepare')
+    at one (src/lib/server/db.ts:11:19)
+    at get_user (src/lib/server/user.ts:6:9)
+    at get_or_create_device_user (src/lib/server/device.ts:7:22)
+[500] GET /
+TypeError: Cannot read properties of undefined (reading 'prepare')
+    at one (src/lib/server/db.ts:11:19)
+    at get_user (src/lib/server/user.ts:6:9)
+    at get_or_create_device_user (src/lib/server/device.ts:7:22)
+[500] GET /
+TypeError: Cannot read properties of undefined (reading 'prepare')
+    at one (src/lib/server/db.ts:11:19)
+    at get_user (src/lib/server/user.ts:6:9)
+    at get_or_create_device_user (src/lib/server/device.ts:7:22)
+[500] GET /
+TypeError: Cannot read properties of undefined (reading 'prepare')
+    at one (src/lib/server/db.ts:11:19)
+    at get_user (src/lib/server/user.ts:6:9)
+    at get_or_create_device_user (src/lib/server/device.ts:7:22)
+[500] GET /
+TypeError: Cannot read properties of undefined (reading 'prepare')
+    at one (src/lib/server/db.ts:11:19)
+    at get_user (src/lib/server/user.ts:6:9)
+    at get_or_create_device_user (src/lib/server/device.ts:7:22)
+[500] GET /
+TypeError: Cannot read properties of undefined (reading 'prepare')
+    at one (src/lib/server/db.ts:11:19)
+    at get_user (src/lib/server/user.ts:6:9)
+    at get_or_create_device_user (src/lib/server/device.ts:7:22)
+[500] GET /
+10:57:44 PM [vite] (ssr) connected.
+10:57:44 PM [vite] server restarted.
+Using secrets defined in .env
+TypeError: Cannot read properties of undefined (reading 'prepare')
+    at one (src/lib/server/db.ts:19:18)
+    at get_user (src/lib/server/user.ts:12:38)
+    at get_or_create_device_user (src/lib/server/device.ts:14:56)
+[500] GET /
+TypeError: Cannot read properties of undefined (reading 'prepare')
+    at one (src/lib/server/db.ts:19:18)
+    at get_user (src/lib/server/user.ts:12:38)
+    at get_or_create_device_user (src/lib/server/device.ts:14:56)
+[500] GET /
+TypeError: Cannot read properties of undefined (reading 'prepare')
+    at one (src/lib/server/db.ts:19:18)
+    at get_user (src/lib/server/user.ts:12:38)
+    at get_or_create_device_user (src/lib/server/device.ts:14:56)
+[500] GET /
+TypeError: Cannot read properties of undefined (reading 'prepare')
+    at one (src/lib/server/db.ts:19:18)
+    at get_user (src/lib/server/user.ts:12:38)
+    at get_or_create_device_user (src/lib/server/device.ts:14:56)
+[500] GET /
+10:59:11 PM [vite] (client) hmr update /src/app.css
+10:59:11 PM [vite] (ssr) page reload src/hooks.server.ts
+10:59:11 PM [vite] (ssr) program reload
+10:59:12 PM [vite-plugin-svelte] src/routes/+page.svelte:7:26 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+[200] GET /
+10:59:13 PM [vite-plugin-svelte] src/routes/+page.svelte:7:26 This reference only captures the initial value of `data`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+[200] GET /
+[200] GET /
+11:00:25 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/0.js
+11:00:25 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/1.js
+11:00:25 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/2.js
+11:00:25 PM [vite] (client) page reload .svelte-kit/generated/client/app.js
+11:00:25 PM [vite] (client) page reload .svelte-kit/generated/client/matchers.js
+11:00:25 PM [vite] (ssr) page reload .svelte-kit/generated/shared/error-template.js
+11:00:25 PM [vite] (ssr) program reload
+11:00:25 PM [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+11:00:25 PM [vite] (ssr) program reload
+TypeError: Cannot read properties of null (reading 'function')
+    at Module.push_element (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1975:25)
+    at eval (/home/ed/i/tldr/src/routes/+layout.svelte:24:27)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at eval (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:885:12)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at Renderer.head (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1331:8)
+    at Module.head (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:883:11)
+    at eval (/home/ed/i/tldr/src/routes/+layout.svelte:22:26)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at Renderer.component (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1483:22)
+TypeError: Cannot read properties of null (reading 'function')
+    at Module.push_element (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1975:25)
+    at eval (/home/ed/i/tldr/node_modules/.pnpm/@sveltejs+kit@3.0.0-next.14_@sveltejs+vite-plugin-svelte@7.2.0_svelte@5.56.8_@typescrip_eea05ef3e4edb8efd3b73f75ff234b3c/node_modules/@sveltejs/kit/src/runtime/components/error.svelte?v=349900c6:19:26)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at Renderer.component (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1483:22)
+    at Error (/home/ed/i/tldr/node_modules/.pnpm/@sveltejs+kit@3.0.0-next.14_@sveltejs+vite-plugin-svelte@7.2.0_svelte@5.56.8_@typescrip_eea05ef3e4edb8efd3b73f75ff234b3c/node_modules/@sveltejs/kit/src/runtime/components/error.svelte?v=349900c6:16:13)
+    at failed (/home/ed/i/tldr/node_modules/.pnpm/@sveltejs+kit@3.0.0-next.14_@sveltejs+vite-plugin-svelte@7.2.0_svelte@5.56.8_@typescrip_eea05ef3e4edb8efd3b73f75ff234b3c/node_modules/@sveltejs/kit/src/runtime/components/root.svelte?v=349900c6:48:14)
+    at Renderer.boundary (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1469:5)
+    at node (/home/ed/i/tldr/node_modules/.pnpm/@sveltejs+kit@3.0.0-next.14_@sveltejs+vite-plugin-svelte@7.2.0_svelte@5.56.8_@typescrip_eea05ef3e4edb8efd3b73f75ff234b3c/node_modules/@sveltejs/kit/src/runtime/components/root.svelte?v=349900c6:56:16)
+    at eval (/home/ed/i/tldr/node_modules/.pnpm/@sveltejs+kit@3.0.0-next.14_@sveltejs+vite-plugin-svelte@7.2.0_svelte@5.56.8_@typescrip_eea05ef3e4edb8efd3b73f75ff234b3c/node_modules/@sveltejs/kit/src/runtime/components/root.svelte?v=349900c6:101:4)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+TypeError: Cannot read properties of null (reading 'function')
+    at Module.push_element (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1975:25)
+    at eval (/home/ed/i/tldr/src/routes/+layout.svelte:24:27)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at eval (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:885:12)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at Renderer.head (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1331:8)
+    at Module.head (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:883:11)
+    at eval (/home/ed/i/tldr/src/routes/+layout.svelte:22:26)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at Renderer.component (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1483:22)
+[500] GET /
+[404] GET /favicon.ico
+[304] GET /
+11:00:29 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/0.js
+11:00:29 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/1.js
+11:00:29 PM [vite] (client) page reload .svelte-kit/generated/client/nodes/2.js
+11:00:29 PM [vite] (client) page reload .svelte-kit/generated/client/app.js
+11:00:29 PM [vite] (client) page reload .svelte-kit/generated/client/matchers.js
+11:00:29 PM [vite] (ssr) page reload .svelte-kit/generated/shared/error-template.js
+11:00:29 PM [vite] (ssr) program reload
+11:00:29 PM [vite] (ssr) page reload .svelte-kit/generated/server/internal.js
+11:00:29 PM [vite] (ssr) program reload
+TypeError: Cannot read properties of null (reading 'function')
+    at Module.push_element (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1975:25)
+    at eval (/home/ed/i/tldr/src/routes/+layout.svelte:24:27)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at eval (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:885:12)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at Renderer.head (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1331:8)
+    at Module.head (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:883:11)
+    at eval (/home/ed/i/tldr/src/routes/+layout.svelte:22:26)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at Renderer.component (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1483:22)
+TypeError: Cannot read properties of null (reading 'function')
+    at Module.push_element (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1975:25)
+    at eval (/home/ed/i/tldr/node_modules/.pnpm/@sveltejs+kit@3.0.0-next.14_@sveltejs+vite-plugin-svelte@7.2.0_svelte@5.56.8_@typescrip_eea05ef3e4edb8efd3b73f75ff234b3c/node_modules/@sveltejs/kit/src/runtime/components/error.svelte?v=349900c6:19:26)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at Renderer.component (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1483:22)
+    at Error (/home/ed/i/tldr/node_modules/.pnpm/@sveltejs+kit@3.0.0-next.14_@sveltejs+vite-plugin-svelte@7.2.0_svelte@5.56.8_@typescrip_eea05ef3e4edb8efd3b73f75ff234b3c/node_modules/@sveltejs/kit/src/runtime/components/error.svelte?v=349900c6:16:13)
+    at failed (/home/ed/i/tldr/node_modules/.pnpm/@sveltejs+kit@3.0.0-next.14_@sveltejs+vite-plugin-svelte@7.2.0_svelte@5.56.8_@typescrip_eea05ef3e4edb8efd3b73f75ff234b3c/node_modules/@sveltejs/kit/src/runtime/components/root.svelte?v=349900c6:48:14)
+    at Renderer.boundary (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1469:5)
+    at node (/home/ed/i/tldr/node_modules/.pnpm/@sveltejs+kit@3.0.0-next.14_@sveltejs+vite-plugin-svelte@7.2.0_svelte@5.56.8_@typescrip_eea05ef3e4edb8efd3b73f75ff234b3c/node_modules/@sveltejs/kit/src/runtime/components/root.svelte?v=349900c6:56:16)
+    at eval (/home/ed/i/tldr/node_modules/.pnpm/@sveltejs+kit@3.0.0-next.14_@sveltejs+vite-plugin-svelte@7.2.0_svelte@5.56.8_@typescrip_eea05ef3e4edb8efd3b73f75ff234b3c/node_modules/@sveltejs/kit/src/runtime/components/root.svelte?v=349900c6:101:4)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+TypeError: Cannot read properties of null (reading 'function')
+    at Module.push_element (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1975:25)
+    at eval (/home/ed/i/tldr/src/routes/+layout.svelte:24:27)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at eval (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:885:12)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at Renderer.head (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1331:8)
+    at Module.head (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:883:11)
+    at eval (/home/ed/i/tldr/src/routes/+layout.svelte:22:26)
+    at Renderer.child (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1410:18)
+    at Renderer.component (/home/ed/i/tldr/node_modules/.vite/deps_ssr/dev-CdbaVSI9.js?v=349900c6:1483:22)
+[500] GET /
+[304] GET /
