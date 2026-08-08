@@ -32,6 +32,14 @@
 		URL.revokeObjectURL(a.href);
 	};
 
+	const reset = () => {
+		started = false;
+		done = false;
+		out = '';
+		err = '';
+		input = '';
+	};
+
 	const submit = async () => {
 		if (busy || !input.trim()) return;
 		started = true;
@@ -113,13 +121,18 @@
 		{/if}
 	</p>
 {/if}
-<div class="min-h-40">
-	{#if browser}
-		<div class="text-ink">{@html render_md(out)}</div>
-	{:else}
-		<pre class="whitespace-pre-wrap text-ink">{out}</pre>
-	{/if}
-</div>
+{#if started}
+	<div class="rounded-card border border-line bg-surface p-4">
+		{#if browser}
+			<div class="text-ink">{@html render_md(out)}</div>
+		{:else}
+			<pre class="whitespace-pre-wrap text-ink">{out}</pre>
+		{/if}
+		{#if busy && !out}
+			<p class="text-sm text-muted">summarizing…</p>
+		{/if}
+	</div>
+{/if}
 {#if done}
 	<div class="flex gap-3">
 		<button onclick={dl} class="text-sm text-accent">download .md</button>
@@ -131,5 +144,6 @@
 		>
 			copy
 		</button>
+		<button onclick={reset} class="ml-auto text-sm text-muted">new summary</button>
 	</div>
 {/if}

@@ -34,8 +34,8 @@
 	});
 </script>
 
-<div class="mx-auto flex min-h-screen w-full max-w-2xl flex-col justify-center gap-4 p-6">
-	<h1 class="text-xl font-bold text-ink">tldr</h1>
+<div class="mx-auto flex w-full max-w-2xl flex-col gap-6 px-6 py-16">
+	<h1 class="text-2xl font-bold tracking-tight text-ink">tldr</h1>
 	<SumBox />
 	<div class="flex flex-col gap-2">
 		<input
@@ -51,9 +51,9 @@
 					<li>
 						<a href={`/s/${row.id}`} class="flex items-center gap-3 px-3 py-2 text-sm text-ink">
 							<span class="w-5 text-center">{ty_icon[row.ty] ?? 'x'}</span>
-							<span class="truncate flex-1">{row.t}</span>
+							<span class="min-w-0 flex-1 truncate">{row.t}</span>
 							{#if row.sn}
-								<span class="truncate flex-1 text-muted">{@html row.sn}</span>
+								<span class="hidden w-1/3 truncate text-muted sm:block">{@html row.sn}</span>
 							{/if}
 							<span class="shrink-0 text-muted">{since(row.cr)}</span>
 						</a>
