@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "tldr",
+  "version": "0.1.0",
+  "description": "summarize any video, audio, page, or text",
+  "permissions": ["contextMenus", "storage", "activeTab", "scripting"],
+  "host_permissions": ["https://tldr.apexlinks.org/*", "<all_urls>"],
+  "background": { "service_worker": "bg.js", "type": "module" },
+  "content_scripts": [{ "matches": ["<all_urls>"], "js": ["content.js"], "run_at": "document_idle" }],
+  "action": { "default_popup": "popup.html" },
+  "icons": { "128": "icon.png" }
+}

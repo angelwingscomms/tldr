@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>tldr</title>
+		<style>
+			* { margin: 0; box-sizing: border-box; }
+			body { width: 260px; padding: 12px; font-family: system-ui; font-size: 13px; color: #222; background: #fff; }
+			h1 { font-size: 14px; margin-bottom: 10px; }
+			label { display: block; margin-bottom: 4px; color: #666; }
+			input { width: 100%; padding: 6px; border: 1px solid #ccc; border-radius: 6px; margin-bottom: 10px; }
+			button { width: 100%; padding: 7px; border: 0; border-radius: 6px; background: #2e7d5b; color: #fff; cursor: pointer; }
+			a { display: block; text-align: center; margin-top: 10px; color: #2e7d5b; }
+		</style>
+	</head>
+	<body>
+		<h1>tldr</h1>
+		<label>api token</label>
+		<input id="token" placeholder="paste or sign in" />
+		<button id="save">save</button>
+		<a href="https://tldr.apexlinks.org/settings" target="_blank">open settings</a>
+		<script>
+			const input = document.getElementById('token');
+			chrome.storage.local.get('token', (st) => {
+				if (st.token) input.value = st.token;
+			});
+			document.getElementById('save').addEventListener('click', () => {
+				chrome.storage.local.set({ token: input.value.trim() });
+			});
+		</script>
+	</body>
+</html>

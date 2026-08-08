@@ -91,7 +91,7 @@ export const POST: RequestHandler = async (event) => {
 					hit.tr,
 					now()
 				);
-				return new Response(hit.b, { headers: { 'x-tldr-cache': '1' } });
+				return new Response(hit.b, { headers: { 'x-tldr-cache': '1', 'x-tldr-id': id } });
 			}
 		}
 
@@ -226,7 +226,9 @@ export const POST: RequestHandler = async (event) => {
 			now()
 		);
 
-		return response;
+		const out = response ?? new Response(final);
+		out.headers.set('x-tldr-id', id);
+		return out;
 	} catch (e) {
 		if ((e as { code?: string }).code === 'needs_extension') {
 			return json({ e: 'needs_extension' }, { status: 422 });
